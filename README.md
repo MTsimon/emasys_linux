@@ -18,12 +18,14 @@ C:\Users\simon\Desktop\emasys_linux>docker build -t emazys_linux .
 
 C:\Users\simon\Desktop\emasys_linux>docker run -it --name=emazys_container -v <local_dir>:/mnt/host emazys_linux
 ```
-> Eksempel på <local_dir> kan være C:\Users\%USERNAME%\Desktop , der oprettes en ny mappe der hedder "release", some indeholder zImage og 8188eu.ko på det lokale skrivebord. Husk at fjerne "<>" tegn.
+> Eksempel på <local_dir> kan være C:\\Users\\%USERNAME%\\Desktop , der oprettes en ny mappe der hedder "rootfs", some indeholder zImage og 8188eu.ko på det lokale skrivebord. Husk at fjerne "<>" tegn.
 ```console
 root@8c98670601ec:/# make_kernel
 ```
 > Dette kan tage lang tid afhængig af internetforbindelse og CPU-hastighed
-Exit
+```console
+root@8c98670601ec:/# exit
+```
 
 Kernefilerne kan nu findes i <local_dir>/rootfs mappen.
 
